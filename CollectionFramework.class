@@ -1,0 +1,51 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class ClcFwrk {
+   public ClcFwrk() {
+   }
+
+   public static void main(String[] var0) {
+      HashMap var1 = new HashMap();
+      new TreeMap();
+      var1.put("One", 1);
+      var1.put("Two", 2);
+      var1.put("Three", 3);
+      var1.put("Four", 4);
+      var1.put("Five", 5);
+      System.out.println(var1);
+      Iterator var3 = var1.entrySet().iterator();
+
+      while(var3.hasNext()) {
+         Map.Entry var4 = (Map.Entry)var3.next();
+         System.out.println(var4);
+         System.out.println("Key - " + (String)var4.getKey());
+         System.out.println("Value - " + var4.getValue());
+      }
+
+      var3 = var1.keySet().iterator();
+
+      while(var3.hasNext()) {
+         String var5 = (String)var3.next();
+         System.out.println("Key - " + var5);
+      }
+
+      var3 = var1.values().iterator();
+
+      while(var3.hasNext()) {
+         Integer var6 = (Integer)var3.next();
+         System.out.println("Values - " + var6);
+      }
+
+      System.out.println(var1.containsValue(5));
+      System.out.println(var1.isEmpty());
+      var1.remove("Three");
+      System.out.println(var1);
+      var1.remove(5);
+      System.out.println(var1);
+      var1.clear();
+   }
+}
